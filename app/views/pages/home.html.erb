@@ -1,17 +1,21 @@
-<div class="hero-unit">
-<h1>Welcome!</h1>
-<p>
-	That's the new site for
-	<%= link_to "NBA", "http://nba.com"
-	%>
-	association.
-</p>
+<% if user_signed_in? %>
+	<h1>You are logged in!</h1>
+<% else %>
 
-<p>
-	<%= link_to "Sign up now!", "#", class: "btn btn-warning btn-large" %>
-</p>
-</div>
+	<div class="hero-unit">
+	<h1>Welcome!</h1>
+	<p>
+		That's the new site for
+		<%= link_to "NBA", "http://nba.com"
+		%>
+		association.
+	</p>
 
+	<p>
+		<%= link_to "Sign up now!", new_user_registration_path, class: "btn btn-warning btn-large" %>
+	</p>
+	</div>
+<% end %>
 
 
 
