@@ -1,20 +1,3 @@
-<h1>Listing pins</h1>
-
-<table class="table table-striped">
-  <tr>
-    <thead>
-   		<th>Image</th>
-      <th>Description</th>
-      <th></th>
-      <th></th>
-      <th></th>
-  </thead>
-  </tr>
-<tbody>
-  <%= render @pins %>
-</tbody>
-</table>
-
-<br />
-
-<%= link_to 'New Pin', new_pin_path %>
+<div id="pins">
+<%= render @pins %>
+</div>
